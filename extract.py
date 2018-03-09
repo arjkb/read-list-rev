@@ -7,7 +7,7 @@ def main():
             title = t[1:t.index('(')-1]
             link = t[t.index('(')+1: t.index(')')]
             author = spl[3]
-            print(title, link, author)
+            print("{} | {} | {}".format(title, author, link))
 
 if __name__ == '__main__':
     main()
