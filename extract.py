@@ -1,5 +1,11 @@
+import argparse
+
 def main():
-    with open('favorites.txt') as f:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("filename", help="input file name", type=str)
+    args = parser.parse_args()
+
+    with open(args.filename) as f:
         for line in f:
             line = line.strip()
             spl = line.split('|')
